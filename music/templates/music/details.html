@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{album.title}} Details</title>
+</head>
+<body>
+    <h1>{{album.title}} Details</h1>
+    <h2>{{album.artist}}</h2>
+    <h4>Released in {{album.year}}</h4>
+    <img src={{album.image}} alt="{{album.title}} - {{album.artist}}">
+    {% if error_message %}
+        <p><strong>{{error_message}}</strong></p>
+    {% endif %}
+
+    <h5>Song List</h5>
+    <form action="{% url 'music:favorite' album.id %}" method="POST">
+        {% csrf_token %}
+        {% for song in album.song_set.all %}
+            <input type="radio" id="song{{ forloop.counter }}" name="song" value="{{song.id}}" />
+            <label for="song{{ forloop.counter }}">{{song.title}}
+            {% if song.is_favorite %}
+                <img src="https://cdn2.iconfinder.com/data/icons/snipicons/500/star-128.png" alt="" width="16px" height="auto">
+            {% endif %}
+            </label><br />
+            {% endfor %}
+            <input type="submit" value="Favorite">
+    </form>
+</body>
+</html>
