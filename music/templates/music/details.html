@@ -11,6 +11,7 @@
 </head>
 <body>
     <div class="container">
+        <a href="{% url 'music:index' %}">Back</a>
         <h1>{{album.title}} Details</h1>
         <h2>Artist: {{album.artist}}</h2>
         <h4>Released in {{album.year}}</h4>
