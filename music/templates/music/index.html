@@ -9,7 +9,7 @@
         <div class="row">
             {% for album in albums %}
                 <div class="col-md-4 col-sm-6 col-xs-12">
-                    <a href={{album.id}}>
+                    <a class="anchor-title" href={{album.id}}>
                         <h4>{{album.title}}</h4>
                         <img class="grid-img img-rounded" src={{album.image}} alt="{{album.title}} - {{album.artist}}" />
                     </a>
