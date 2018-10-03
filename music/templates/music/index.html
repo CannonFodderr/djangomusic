@@ -7,13 +7,17 @@
     <div class="container">
     <h1>All Albums</h1>
         <div class="row">
-            {% for album in object_list %}
+            {% for album in all_albums %}
+            <div class="card">
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <a class="anchor-title" href={{album.id}}>
-                        <h4>{{album.title}}</h4>
-                        <img class="grid-img img-rounded" src={{album.image}} alt="{{album.title}} - {{album.artist}}" />
+                        <img class="grid-img card-img-top" src={{album.image}} alt="{{album.title}} - {{album.artist}}" />
+                        <div class="ard-body">
+                            <h5 class="card-title">{{album.title}}</h5>
+                        </div>
                     </a>
                 </div>
+            </div>
             {% endfor %}
         </div>
     </div>
