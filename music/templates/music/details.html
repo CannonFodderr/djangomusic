@@ -12,7 +12,7 @@
         <h2>Artist: {{album.artist}}</h2>
         <h4>Released in {{album.year}}</h4>
         <h4>Song List</h4>
-        <form action="{% url 'music:favorite' album.id %}" method="POST">
+        <form action="#" method="POST">
             {% csrf_token %}
             {% for song in album.song_set.all %}
                 <input type="radio" id="song{{ forloop.counter }}" name="song" value="{{song.id}}" />

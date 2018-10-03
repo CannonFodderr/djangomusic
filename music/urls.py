@@ -4,7 +4,6 @@ from . import views
 app_name="music"
 
 urlpatterns = [
-    path('', views.index, name="index"),
-    path('<album_id>/', views.details, name="details"),
-    path('<album_id>/favorite/', views.favorite, name="favorite")
+    path('', views.indexView.as_view(), name="index"),
+    path('<pk>/', views.detailsView.as_view(), name="details"),
 ]

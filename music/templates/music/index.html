@@ -7,7 +7,7 @@
     <div class="container">
     <h1>All Albums</h1>
         <div class="row">
-            {% for album in albums %}
+            {% for album in object_list %}
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <a class="anchor-title" href={{album.id}}>
                         <h4>{{album.title}}</h4>
