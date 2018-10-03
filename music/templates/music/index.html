@@ -8,15 +8,13 @@
     <h1>All Albums</h1>
         <div class="row">
             {% for album in all_albums %}
-            <div class="card">
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <a class="anchor-title" href={{album.id}}>
-                        <img class="grid-img card-img-top" src={{album.image}} alt="{{album.title}} - {{album.artist}}" />
-                        <div class="ard-body">
-                            <h5 class="card-title">{{album.title}}</h5>
-                        </div>
-                    </a>
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <a class="anchor-title" href={{album.id}}>
+                <div class="card text-white bg-dark mb-3">
+                    <img class="grid-img card-img" src={{album.image}} alt="{{album.title}} - {{album.artist}}" />
+                    <h5 class="card-title">{{album.title}}</h5>
                 </div>
+                </a>
             </div>
             {% endfor %}
         </div>
