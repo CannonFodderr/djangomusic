@@ -8,8 +8,16 @@ ul{
     padding: 0;
     margin: 0;
 }
+.anchor-title{
+    text-decoration: none;
+    text-align: center;
+}
 .grid-img{
     width: 100%;
+    height: auto;
+}
+.details-img{
+    max-width: 40vw;
     height: auto;
 }
 .navbar-brand{
@@ -18,4 +26,5 @@ ul{
 }
 .navbar{
     border-radius: 0;
+    margin-bottom: 0;
 }

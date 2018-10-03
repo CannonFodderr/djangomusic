@@ -1,15 +1,16 @@
 {% extends 'music/base.html' %}
+{% block title %}
+    <title>{{album.title}}</title>
+{% endblock %}
 {% block  body %}
     <div class="container">
-        <a href="{% url 'music:index' %}">Back</a>
         <h1>{{album.title}} Details</h1>
-        <h2>Artist: {{album.artist}}</h2>
-        <h4>Released in {{album.year}}</h4>
-        <img src={{album.image}} alt="{{album.title}} - {{album.artist}}">
+        <img class="details-img img-rounded" src={{album.image}} alt="{{album.title}} - {{album.artist}}">
         {% if error_message %}
             <p><strong>{{error_message}}</strong></p>
         {% endif %}
-
+        <h2>Artist: {{album.artist}}</h2>
+        <h4>Released in {{album.year}}</h4>
         <h4>Song List</h4>
         <form action="{% url 'music:favorite' album.id %}" method="POST">
             {% csrf_token %}

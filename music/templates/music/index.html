@@ -1,13 +1,17 @@
 {% extends 'music/base.html' %}
+{% block title %}
+    <title>Music Albums</title>
+{% endblock %}
+
 {% block body %}
     <div class="container">
-    <h1>Music Albums</h1>
+    <h1>All Albums</h1>
         <div class="row">
             {% for album in albums %}
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <a href={{album.id}}>
                         <h4>{{album.title}}</h4>
-                        <img class="grid-img" src={{album.image}} alt="{{album.title}} - {{album.artist}}" />
+                        <img class="grid-img img-rounded" src={{album.image}} alt="{{album.title}} - {{album.artist}}" />
                     </a>
                 </div>
             {% endfor %}
