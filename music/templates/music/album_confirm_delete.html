@@ -4,7 +4,7 @@
     <h1>Confirm Delete</h1>
     <form method="post">{% csrf_token %}
         <p>Are you sure you want to delete "{{ object }}"?</p>
-        <input type="submit" value="Confirm">
+        <input class="btn btn-danger" type="submit" value="Confirm">
     </form>
 </div>
 {% endblock %}

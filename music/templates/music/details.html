@@ -24,5 +24,7 @@
                 {% endfor %}
                 <input class="btn btn-primary" type="submit" value="Favorite">
         </form>
+        <a class="btn btn-default" href="/music/album/{{album.id}}/edit">Edit</a>
+        <a class="btn btn-danger" href="/music/album/{{album.id}}/delete">Delete</a>
     </div>
 {% endblock  %}
