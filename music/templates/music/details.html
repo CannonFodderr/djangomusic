@@ -5,7 +5,7 @@
 {% block  body %}
     <div class="container">
         <h1>{{album.title}} Details</h1>
-        <img class="details-img img-rounded" src={{album.image}} alt="{{album.title}} - {{album.artist}}">
+        <img class="details-img img-rounded" src={{album.image.url}} alt="{{album.title}} - {{album.artist}}">
         {% if error_message %}
             <p><strong>{{error_message}}</strong></p>
         {% endif %}
